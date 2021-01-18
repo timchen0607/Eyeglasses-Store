@@ -20,4 +20,5 @@
 
 - loading 效果
 - 圖片延遲載入
--
+- brandImage 互動效果
+- series hover 文字與圖片置中
