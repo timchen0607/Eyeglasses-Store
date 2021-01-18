@@ -116,6 +116,64 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    h3 {
+      text-indent: 1rem;
+    }
   }
 }
 // Series End
+
+// Joint Start
+.joint {
+  padding: 3.5rem 0;
+  background: url(../images/background.png) no-repeat center center/ cover;
+  text-align: center;
+  &-title {
+    margin-bottom: 3.5rem;
+    color: $c_light;
+    font-size: 3rem;
+    font-weight: bold;
+  }
+  &-box {
+    display: flex;
+    align-items: center;
+    img {
+      width: 100%;
+      padding: 0.25rem;
+      box-sizing: border-box;
+    }
+    &40p {
+      width: 42%;
+    }
+    &60p {
+      width: 58%;
+    }
+    &100p {
+      display: flex;
+      justify-content: space-between;
+      align-items: stretch;
+    }
+  }
+  &-btn {
+    position: relative;
+    width: 25%;
+    margin: 0.25rem 10% 0.25rem 0.25rem;
+    background-color: #f9ca00;
+    &-text {
+      position: absolute;
+      top: 1.5rem;
+      bottom: 1.5rem;
+      left: 1.5rem;
+      padding: 1rem;
+      color: $c_main;
+      background-color: $c_light;
+      font-size: 2.5rem;
+      white-space: nowrap;
+      span {
+        font-weight: bold;
+        margin-right: 1rem;
+      }
+    }
+  }
+}
+// Joint End
