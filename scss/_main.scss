@@ -1,12 +1,54 @@
-.container {
-  width: 100%;
-  margin: auto;
-  box-sizing: border-box;
-  max-width: 1200px;
-  @include pad {
-    max-width: 720px;
+// Navbar Start
+.nav {
+  background-color: $c_main;
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
   }
-  @include mobile {
-    max-width: 540px;
+  &-icon a {
+    display: block;
+    margin: 15px 0;
+    height: 60px;
+    text-indent: 101%;
+    white-space: nowrap;
+    overflow: hidden;
+    background: url(../images/icon_light.png) no-repeat center center / contain;
+  }
+  &-menu li {
+    display: inline-block;
+    a {
+      padding: 1rem 1.5rem;
+      color: $c_light;
+      font-size: 1.1rem;
+      text-decoration: none;
+    }
   }
 }
+// Navbar End
+
+// Banner Start
+.banner {
+  background: url(../images/banner.png) no-repeat center center / cover;
+  height: 60vh;
+  .container {
+    height: 100%;
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: flex-end;
+    padding-right: 3rem;
+    color: $c_light;
+  }
+  &-title {
+    font-size: 3rem;
+    line-height: 6rem;
+    letter-spacing: 0.2rem;
+    font-weight: bold;
+  }
+  &-content {
+    font-size: 2rem;
+    letter-spacing: 0.1rem;
+  }
+}
+// Banner End
