@@ -125,7 +125,7 @@
 
 // Joint Start
 .joint {
-  padding: 3.5rem 0;
+  padding: 3.5rem 0 25rem;
   background: url(../images/background.png) no-repeat center center/ cover;
   text-align: center;
   &-title {
@@ -235,3 +235,50 @@
   }
 }
 // Joint End
+
+// Customer Start
+.customer {
+  transform: translateY(-40rem);
+  height: 0;
+  margin-top: 15rem;
+  &-title {
+    margin-bottom: 3.5rem;
+    color: $c_light;
+    font-size: 3rem;
+    font-weight: bold;
+    text-align: center;
+  }
+  &-content {
+    display: flex;
+    justify-content: space-between;
+  }
+  &-card {
+    width: 100%;
+    max-width: 256px;
+    &-img {
+      overflow: hidden;
+      img {
+        transition: 0.3s;
+        vertical-align: middle;
+      }
+    }
+    &-content {
+      padding: 1rem;
+      background-color: $c_light;
+      border: 1px solid #dee2e6;
+      > * {
+        margin-bottom: 1rem;
+        line-height: 1.5rem;
+      }
+      span {
+        color: #707070;
+      }
+    }
+    &:hover {
+      .customer-card-img img {
+        transform: scale(1.1);
+      }
+    }
+  }
+}
+// Customer End
