@@ -267,7 +267,7 @@
 
 // Contact Start
 .contact {
-  padding: 4rem;
+  padding: 4rem 0;
   background-color: #aa06010d;
   &-title {
     margin-bottom: 0;
@@ -345,3 +345,57 @@
   }
 }
 // Contact End
+
+// Footer Start
+.footer {
+  padding: 3rem 0;
+  background-color: $c_main;
+  &-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &-list {
+    display: flex;
+  }
+  &-item {
+    margin: 0 0.5rem;
+    padding: 0.5rem;
+    display: block;
+    color: $c_light;
+    text-decoration: none;
+    &:hover {
+      background-color: $c_sub;
+      border-radius: 5px;
+    }
+  }
+  &-icon {
+    font-size: 2.5rem;
+  }
+  &-info {
+    margin-left: 1rem;
+    display: block;
+    color: $c_light;
+    font-size: 1.8rem;
+    line-height: 3rem;
+    text-decoration: none;
+    span {
+      margin-left: 1rem;
+    }
+  }
+  &-title {
+    display: flex;
+    align-items: center;
+    color: $c_light;
+    img {
+      width: 80px;
+      height: 80px;
+      margin-right: 2rem;
+    }
+  }
+  &-line {
+    margin: 1rem 0;
+    border: 1px solid $c_light;
+  }
+}
+// Footer End
