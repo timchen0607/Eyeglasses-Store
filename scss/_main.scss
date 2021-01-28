@@ -1,10 +1,27 @@
 // Navbar Start
 .nav {
+  position: sticky;
   background-color: $c_main;
   .container {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    @include mobile {
+      position: relative;
+      justify-content: center;
+    }
+  }
+  &-hamburger {
+    position: absolute;
+    top: 5px;
+    bottom: 5px;
+    left: 5px;
+    background-color: transparent;
+    border: unset;
+    &-bar {
+      width: 10px;
+      height: 2px;
+    }
   }
   &-icon a {
     display: block;
@@ -14,6 +31,10 @@
     white-space: nowrap;
     overflow: hidden;
     background: url(../images/icon_light.png) no-repeat center center / contain;
+    @include mobile {
+      margin: 5px auto;
+      height: 45px;
+    }
   }
   &-menu li {
     display: inline-block;
@@ -22,6 +43,9 @@
       color: $c_light;
       font-size: 1.1rem;
       text-decoration: none;
+    }
+    @include mobile {
+      display: none;
     }
   }
 }
@@ -39,16 +63,33 @@
     align-items: flex-end;
     padding-right: 3rem;
     color: $c_light;
+    @include mobile {
+      padding-right: 0.5rem;
+    }
   }
   &-title {
     font-size: 3rem;
     line-height: 6rem;
     letter-spacing: 0.2rem;
     font-weight: bold;
+    @include pad {
+      font-size: 2rem;
+    }
+    @include mobile {
+      font-size: 1.5rem;
+      line-height: 4rem;
+      letter-spacing: 0;
+    }
   }
   &-content {
     font-size: 2rem;
     letter-spacing: 0.1rem;
+    @include pad {
+      font-size: 1.3rem;
+    }
+    @include mobile {
+      font-size: 1rem;
+    }
   }
 }
 // Banner End
