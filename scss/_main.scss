@@ -3,6 +3,7 @@
   position: sticky;
   top: 0;
   background-color: $c_main;
+  z-index: 100;
   .container {
     display: flex;
     justify-content: space-between;
@@ -198,27 +199,75 @@
     margin: 2rem 0px;
     display: flex;
     align-items: center;
-    color: $c_main;
-    font-size: 2.5rem;
-    font-style: italic;
-    font-weight: bold;
-    text-transform: uppercase;
     text-decoration: none;
     &:nth-child(odd) {
       flex-direction: row-reverse;
+      &:hover {
+        .series-image {
+          transform: translateX(-21.4%);
+        }
+        .series-content {
+          transform: translateX(116.7%);
+        }
+      }
+      @include pad {
+        flex-direction: unset;
+      }
+    }
+    &:hover {
+      .series-image {
+        filter: grayscale(1);
+        transform: translateX(21.4%);
+      }
+      .series-content {
+        color: $c_light;
+        transform: translateX(-116.7%);
+      }
+    }
+    @include mobile {
+      position: relative;
     }
   }
   &-image {
     width: 70%;
-    filter: grayscale(1);
+    transition: transform 0.5s, filter 1s;
+    filter: grayscale(0);
+    @include pad {
+      width: 60%;
+    }
+    @include mobile {
+      width: 100%;
+      filter: grayscale(1);
+    }
   }
   &-content {
     width: 30%;
     display: flex;
     justify-content: center;
     align-items: center;
+    color: $c_main;
+    font-size: 2.5rem;
+    font-style: italic;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: transform 0.5s, color 1s;
     h3 {
       text-indent: 1rem;
+    }
+    @include pad {
+      width: 40%;
+      h3 {
+        font-size: 1.5rem;
+      }
+    }
+    @include mobile {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      width: 100%;
+      color: $c_light;
     }
   }
 }
