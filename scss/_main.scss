@@ -59,11 +59,6 @@
   background-color: #fbf2f2;
   padding: 3.5rem 0;
   text-align: center;
-  &-title {
-    font-size: 3rem;
-    font-weight: bold;
-    margin-bottom: 3.5rem;
-  }
   &-list {
     display: flex;
     justify-content: space-around;
@@ -87,12 +82,6 @@
 .series {
   padding: 3.5rem 0;
   text-align: center;
-  &-title {
-    margin-bottom: 3.5rem;
-    color: $c_sub;
-    font-size: 3rem;
-    font-weight: bold;
-  }
   &-item {
     margin: 2rem 0px;
     display: flex;
@@ -129,10 +118,7 @@
   background: url(../images/background.png) no-repeat center center/ cover;
   text-align: center;
   &-title {
-    margin-bottom: 3.5rem;
     color: $c_light;
-    font-size: 3rem;
-    font-weight: bold;
   }
   &-box {
     display: flex;
@@ -242,11 +228,7 @@
   height: 0;
   margin-top: 15rem;
   &-title {
-    margin-bottom: 3.5rem;
     color: $c_light;
-    font-size: 3rem;
-    font-weight: bold;
-    text-align: center;
   }
   &-content {
     display: flex;
@@ -282,3 +264,84 @@
   }
 }
 // Customer End
+
+// Contact Start
+.contact {
+  padding: 4rem;
+  background-color: #aa06010d;
+  &-title {
+    margin-bottom: 0;
+  }
+  .container {
+    max-width: 800px;
+    display: flex;
+    flex-direction: column;
+  }
+  &-content {
+    margin: 1.5rem 0;
+    line-height: 1.5rem;
+  }
+  .input-group {
+    margin-bottom: 1rem;
+    > * {
+      width: 100%;
+      display: block;
+      font-size: 1rem;
+      line-height: 1.5rem;
+    }
+    label {
+      margin-bottom: 0.5rem;
+    }
+    input,
+    textarea {
+      padding: 0.8rem;
+      background-color: transparent;
+      border: 1px solid $c_dark;
+      outline: none;
+      resize: none;
+    }
+  }
+  .checkbox-group {
+    input[type="checkbox"] {
+      width: 1.5rem;
+      height: 1.5rem;
+      vertical-align: middle;
+    }
+    label {
+      vertical-align: middle;
+    }
+  }
+  &-submit {
+    position: relative;
+    margin: 2.5rem auto;
+    padding: 1rem;
+    width: 10rem;
+    text-align: center;
+    color: $c_light;
+    background-color: $c_main;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      border: 3px solid $c_main;
+      z-index: -1;
+      transition: 0.1s;
+    }
+    &:hover::after {
+      top: -5px;
+      bottom: -5px;
+      left: -5px;
+      right: -5px;
+    }
+    &:active {
+      opacity: 0.8;
+    }
+  }
+}
+// Contact End
