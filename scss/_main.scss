@@ -16,11 +16,64 @@
     top: 5px;
     bottom: 5px;
     left: 5px;
+    width: 45px;
+    padding: 10px;
+    display: none;
     background-color: transparent;
     border: unset;
+    outline: none;
+    &-check {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 45px;
+      height: 45px;
+      margin: 0;
+      z-index: 1;
+      opacity: 0;
+      &:checked ~ .nav-hamburger-bar {
+        border-color: $c_main;
+        &::before {
+          top: -2px;
+          transform: rotate(-135deg) scaleX(1.2);
+        }
+        &::after {
+          bottom: -2px;
+          transform: rotate(135deg) scaleX(1.2);
+        }
+      }
+    }
     &-bar {
-      width: 10px;
-      height: 2px;
+      position: relative;
+      display: block;
+      border: 2px solid $c_light;
+      border-radius: 3px;
+      transition: border-color 0.5s;
+      &::before {
+        content: "";
+        position: absolute;
+        top: -10px;
+        left: -2px;
+        display: block;
+        width: 100%;
+        border: 2px solid $c_light;
+        border-radius: 3px;
+        transition: 0.5s;
+      }
+      &::after {
+        content: "";
+        position: absolute;
+        bottom: -10px;
+        left: -2px;
+        display: block;
+        width: 100%;
+        border: 2px solid $c_light;
+        border-radius: 3px;
+        transition: 0.5s;
+      }
+    }
+    @include mobile {
+      display: unset;
     }
   }
   &-icon a {
