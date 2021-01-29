@@ -275,7 +275,7 @@
 
 // Joint Start
 .joint {
-  padding: 3.5rem 0 25rem;
+  padding: 3.5rem 0 13rem;
   background: url(../images/background.png) no-repeat center center/ cover;
   text-align: center;
   &-title {
@@ -412,9 +412,8 @@
 
 // Customer Start
 .customer {
-  transform: translateY(-40rem);
-  height: 0;
-  margin-top: 20rem;
+  margin-top: -10rem;
+  margin-bottom: 5rem;
   &-title {
     color: $c_light;
   }
@@ -466,6 +465,7 @@
     margin-bottom: 0;
   }
   .container {
+    padding: 0 1rem;
     max-width: 800px;
     display: flex;
     flex-direction: column;
@@ -473,6 +473,7 @@
   &-content {
     margin: 1.5rem 0;
     line-height: 1.5rem;
+    justify-content: stretch;
   }
   .input-group {
     margin-bottom: 1rem;
@@ -490,6 +491,7 @@
       padding: 0.8rem;
       background-color: transparent;
       border: 1px solid $c_dark;
+      box-sizing: border-box;
       outline: none;
       resize: none;
     }
