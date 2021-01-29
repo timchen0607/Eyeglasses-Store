@@ -549,9 +549,17 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
   }
   &-list {
     display: flex;
+    @include mobile {
+      width: 100%;
+      justify-content: center;
+      &:first-child {
+        display: none;
+      }
+    }
   }
   &-item {
     margin: 0 0.5rem;
