@@ -136,6 +136,75 @@
 }
 // Navbar End
 
+// Footer Start
+.footer {
+  padding: 3rem 0;
+  background-color: $c_main;
+  &-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  &-list {
+    display: flex;
+    @include mobile {
+      width: 100%;
+      justify-content: center;
+      &:first-child {
+        display: none;
+      }
+    }
+  }
+  &-item {
+    margin: 0 0.5rem;
+    padding: 0.5rem;
+    display: block;
+    color: $c_light;
+    text-decoration: none;
+    &:hover {
+      background-color: $c_sub;
+      border-radius: 5px;
+    }
+  }
+  &-icon {
+    margin: 0 0.5rem;
+    padding: 0.5rem;
+    color: $c_light;
+    font-size: 2.5rem;
+  }
+  &-info {
+    margin-left: 1rem;
+    display: block;
+    color: $c_light;
+    font-size: 1.8rem;
+    line-height: 3rem;
+    text-decoration: none;
+    span {
+      margin-left: 1rem;
+    }
+  }
+  &-line {
+    margin: 1rem 0;
+    border: 1px solid $c_light;
+  }
+  &-title {
+    display: flex;
+    align-items: center;
+    color: $c_light;
+    img {
+      width: 60px;
+      height: 60px;
+      margin-right: 1rem;
+    }
+  }
+}
+// Footer End
+
+// ---------------Index Page---------------
+// ---------------Index Page---------------
+// ---------------Index Page---------------
+
 // Banner Start
 .banner {
   background: url(../images/banner.png) no-repeat center center / cover;
@@ -182,7 +251,7 @@
 // Brand Image Start
 .brandImage {
   color: $c_sub;
-  background-color: #fbf2f2;
+  background-color: rgba($c_muted, 0.6);
   padding: 3.5rem 0;
   text-align: center;
   &-list {
@@ -209,7 +278,7 @@
       line-height: 1.3rem;
     }
     &:hover {
-      background-color: #00000011;
+      background-color: $c_muted;
     }
     @include pad {
       width: 50%;
@@ -360,7 +429,7 @@
     &:hover {
       .joint-btn-text {
         transition: 0.5s;
-        text-shadow: 0 -3.5rem #aa0601bb, 0 -7rem #aa060166;
+        text-shadow: 0 -3.5rem rgba($c_main, 0.7), 0 -7rem rgba($c_main, 0.4);
       }
       .joint-btn-arrow > * {
         transition: 0.5s;
@@ -384,7 +453,7 @@
       bottom: 0;
       left: 0;
       right: 0;
-      background-color: #ffffff66;
+      background-color: rgba($c_light, 0.5);
       padding: 2rem;
       display: flex;
       justify-content: center;
@@ -466,7 +535,7 @@
     &-content {
       padding: 1rem;
       background-color: $c_light;
-      border: 1px solid #dee2e6;
+      border: 1px solid $c_muted;
       > * {
         margin-bottom: 1rem;
         line-height: 1.5rem;
@@ -480,7 +549,7 @@
         transform: scale(1.1);
       }
       .customer-card-content {
-        background-color: #fbf2f2;
+        background-color: $c_muted;
       }
     }
   }
@@ -490,7 +559,7 @@
 // Contact Start
 .contact {
   padding: 4rem 0;
-  background-color: #aa06010d;
+  background-color: $c_muted;
   &-title {
     margin-bottom: 0;
   }
@@ -571,67 +640,54 @@
 }
 // Contact End
 
-// Footer Start
-.footer {
-  padding: 3rem 0;
-  background-color: $c_main;
-  &-content {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-  }
+// ---------------Products Page---------------
+// ---------------Products Page---------------
+// ---------------Products Page---------------
+
+// SeriesMenu Start
+.seriesMenu {
+  position: sticky;
+  box-shadow: 0 1px 3px $c_muted;
   &-list {
     display: flex;
-    @include mobile {
-      width: 100%;
-      justify-content: center;
-      &:first-child {
-        display: none;
+    justify-content: center;
+    align-items: center;
+  }
+  &-item {
+    position: relative;
+    padding: clamp(0.5rem, 4vw, 1.5rem);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+    font-size: clamp(1rem, 5vw, 2.5rem);
+    color: $c_main;
+    border-left: 2px solid $c_muted;
+    overflow: hidden;
+    transition: 0.5s;
+    cursor: pointer;
+    h3 {
+      text-indent: 0.5rem;
+    }
+    &:last-child {
+      border-right: 2px solid $c_muted;
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      border: 5px solid $c_main;
+      transform: translateX(-101%);
+      transition: 0.5s;
+    }
+    &:hover {
+      background-color: $c_muted;
+      &::after {
+        transform: translateX(0%);
       }
     }
   }
-  &-item {
-    margin: 0 0.5rem;
-    padding: 0.5rem;
-    display: block;
-    color: $c_light;
-    text-decoration: none;
-    &:hover {
-      background-color: $c_sub;
-      border-radius: 5px;
-    }
-  }
-  &-icon {
-    margin: 0 0.5rem;
-    padding: 0.5rem;
-    color: $c_light;
-    font-size: 2.5rem;
-  }
-  &-info {
-    margin-left: 1rem;
-    display: block;
-    color: $c_light;
-    font-size: 1.8rem;
-    line-height: 3rem;
-    text-decoration: none;
-    span {
-      margin-left: 1rem;
-    }
-  }
-  &-line {
-    margin: 1rem 0;
-    border: 1px solid $c_light;
-  }
-  &-title {
-    display: flex;
-    align-items: center;
-    color: $c_light;
-    img {
-      width: 60px;
-      height: 60px;
-      margin-right: 1rem;
-    }
-  }
 }
-// Footer End
+// SeriesMenu End
