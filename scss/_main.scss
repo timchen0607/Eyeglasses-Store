@@ -647,6 +647,8 @@
 // SeriesMenu Start
 .seriesMenu {
   position: sticky;
+  top: 90px;
+  background-color: $c_light;
   box-shadow: 0 1px 3px $c_muted;
   &-list {
     display: flex;
@@ -689,6 +691,9 @@
       }
     }
   }
+  @include mobile {
+    top: 55px;
+  }
 }
 // SeriesMenu End
 
@@ -707,3 +712,65 @@
   }
 }
 // SeriesBanner End
+
+// SeriesProducts Start
+.seriesProducts {
+  margin: 4rem 0;
+  &-title {
+    font-size: 3rem;
+    font-weight: bold;
+    line-height: 4rem;
+    text-align: center;
+  }
+  &-mark {
+    margin: 1rem 0;
+    font-size: 1.5rem;
+    text-align: center;
+  }
+  &-list {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  &-item {
+    width: 25%;
+    padding: clamp(1rem, 5%, 2rem);
+    box-sizing: border-box;
+    transition: 0.5s;
+    &-img {
+      width: 100%;
+    }
+    &-content {
+      display: flex;
+      justify-content: space-between;
+      font-size: 1.3rem;
+      line-height: 3rem;
+    }
+    &-type > span {
+      display: inline-block;
+      margin-right: 5px;
+      width: 25px;
+      height: 25px;
+      border-radius: 5px;
+      cursor: pointer;
+      &:nth-child(1) {
+        background-color: $c_main;
+      }
+      &:nth-child(2) {
+        background-color: $c_dark;
+      }
+      &:nth-child(3) {
+        background-color: $c_muted;
+      }
+    }
+    &:hover {
+      transform: translateY(-5%);
+    }
+    @include pad {
+      width: 50%;
+    }
+    @include mobile {
+      width: 100%;
+    }
+  }
+}
+// SeriesProducts End
