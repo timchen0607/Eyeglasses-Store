@@ -691,3 +691,19 @@
   }
 }
 // SeriesMenu End
+
+// SeriesBanner Start
+.seriesBanner {
+  &-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    img {
+      width: 49vw;
+      @include mobile {
+        width: 50vw;
+      }
+    }
+  }
+}
+// SeriesBanner End
