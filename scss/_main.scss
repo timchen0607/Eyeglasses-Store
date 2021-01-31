@@ -650,6 +650,7 @@
   top: 90px;
   background-color: $c_light;
   box-shadow: 0 1px 3px $c_muted;
+  z-index: 99;
   &-list {
     display: flex;
     justify-content: center;
