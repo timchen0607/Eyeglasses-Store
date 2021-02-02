@@ -872,3 +872,41 @@
   }
 }
 // LocationList End
+
+// locationInfo Start
+.locationInfo {
+  margin: 3rem 0;
+  .container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  &-item {
+    width: 33.333%;
+    max-width: none;
+    @include pad {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      > * {
+        width: 45%;
+      }
+    }
+    @include mobile {
+      flex-direction: column;
+      > * {
+        width: 100%;
+      }
+    }
+  }
+  &-map {
+    padding: 1rem;
+    width: 60%;
+    @include pad {
+      width: 100%;
+    }
+  }
+}
+// locationInfo End
