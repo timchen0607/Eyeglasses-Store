@@ -910,3 +910,77 @@
   }
 }
 // locationInfo End
+
+// ---------------Blog Page---------------
+// ---------------Blog Page---------------
+// ---------------Blog Page---------------
+
+// BlogMenu Start
+.blogMenu {
+  position: sticky;
+  top: 90px;
+  color: $c_light;
+  background-color: $c_main - #440301;
+  z-index: 99;
+  &-check {
+    position: absolute;
+    top: 100%;
+    width: 100%;
+    height: 37px;
+    margin: 0;
+    z-index: 1;
+    opacity: 0;
+    &:checked {
+      ~ .blogMenu-collapse {
+        transform: scaleY(-1);
+      }
+      ~ .blogMenu-list {
+        height: auto;
+      }
+    }
+  }
+  &-collapse {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    padding: 0.5rem;
+    text-align: center;
+    color: $c_main - #440301;
+    background-color: $c_light;
+    border: 2px solid $c_muted;
+  }
+  &-list {
+    display: flex;
+    height: 0;
+    overflow: hidden;
+    > li {
+      padding: 0.8rem 1.8rem;
+      text-align: center;
+      cursor: pointer;
+      &:last-child {
+        margin-left: auto;
+        @include mobile {
+          display: none;
+        }
+      }
+      &:hover {
+        color: $c_light;
+        background-color: $c_main;
+      }
+      @include mobile {
+        border: 2px solid $c_muted;
+        border-bottom: none;
+      }
+    }
+    @include mobile {
+      flex-direction: column;
+    }
+  }
+  @include mobile {
+    top: 55px;
+    color: $c_main - #440301;
+    background-color: $c_light;
+  }
+}
+// BlogMenu End
