@@ -800,3 +800,75 @@
   }
 }
 // SeriesPagination End
+
+// ---------------Location Page---------------
+// ---------------Location Page---------------
+// ---------------Location Page---------------
+
+// LocationBanner Start
+.locationBanner {
+  height: 40vh;
+  max-height: 350px;
+  background: url(../images/locationBanner.jpg) no-repeat top center / cover;
+  .container {
+    height: 100%;
+    display: flex;
+    align-items: flex-end;
+    padding-bottom: 1rem;
+    font-size: 3rem;
+    color: $c_main;
+    span {
+      color: $c_light;
+      padding: 0 1rem;
+    }
+  }
+}
+// LocationBanner End
+
+// LocationList Start
+.locationList {
+  margin: 3rem 0;
+  .container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+  &-item {
+    width: 100%;
+    max-width: 350px;
+    padding: 1rem;
+    box-sizing: border-box;
+    &-img {
+      width: 100%;
+      vertical-align: middle;
+    }
+    &-content {
+      border: 2px solid $c_muted;
+      h3 {
+        padding: 1rem;
+        font-size: 1.5rem;
+        border-bottom: 2px solid $c_muted;
+      }
+      ul {
+        padding: 1rem;
+        li {
+          line-height: 1.5rem;
+        }
+      }
+    }
+    &-btn {
+      padding: 1rem 0;
+      display: block;
+      text-align: center;
+      text-decoration: none;
+      font-size: 1.2rem;
+      color: $c_light;
+      background-color: $c_main;
+      transition: background-color 0.3s;
+      &:hover {
+        background-color: rgba($c_main, 0.8);
+      }
+    }
+  }
+}
+// LocationList End
