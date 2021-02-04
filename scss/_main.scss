@@ -995,16 +995,20 @@
 
 // BlogList Start
 .blogList {
-  padding: 2rem 0;
+  padding: 2rem;
   .container {
     max-width: 1000px;
   }
   &-item {
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
     margin: 2rem 0;
     &-img {
       width: 50%;
+      @include mobile {
+        width: 100%;
+      }
     }
     &-content {
       display: flex;
@@ -1012,6 +1016,10 @@
       width: 50%;
       padding: 0.5rem 2rem;
       box-sizing: border-box;
+      @include mobile {
+        width: 100%;
+        padding: 1rem 0;
+      }
     }
     &-title {
       font-size: 1.5rem;
