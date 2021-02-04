@@ -1048,3 +1048,46 @@
   }
 }
 // BlogList End
+
+// ---------------Faq Page---------------
+// ---------------Faq Page---------------
+// ---------------Faq Page---------------
+
+// FaqAccordion Start
+.faqAccordion {
+  padding: 3rem 1rem;
+  &-question {
+    display: block;
+    padding: 1rem;
+    font-size: 1.5rem;
+    border: 2px solid $c_dark;
+    border-top: unset;
+    cursor: pointer;
+    &:nth-child(1) {
+      border-top: 2px solid $c_dark;
+    }
+  }
+  &-answer {
+    height: 0;
+    padding: 0 1rem;
+    font-size: 1.1rem;
+    line-height: 2rem;
+    background-color: $c_muted;
+    border-right: 2px solid $c_dark;
+    border-left: 2px solid $c_dark;
+    transition: height 0.5s, padding 0.5s;
+    overflow: hidden;
+  }
+  input[type="radio"] {
+    display: none;
+    &:checked + .faqAccordion-answer {
+      height: 80px;
+      padding: 1rem;
+      border-bottom: 2px solid $c_dark;
+      @include mobile {
+        height: 160px;
+      }
+    }
+  }
+}
+// FaqAccordion End
